@@ -1,0 +1,17 @@
+extends main.pug
+
+block form
+    div(class="container")
+        h2 Add product!
+        form(action='/products' method="post")
+            div(class="mb-3")
+                label(for="name" class="form-label") Name:
+                input(type="text" class="form-control" name="name" id="name" aria-describedby="name")
+            div(class="mb-3")
+                label(for="price" class="form-label") Price:
+                input(type="number" class="form-control" name="price" id="price" aria-describedby="price")
+            div(class="mb-3")
+                label(for="photoUrl" class="form-label") Photo URL:
+                input(type="text" class="form-control" name="photoUrl" id="photoUrl" aria-describedby="photoUrl")
+            button(type="submit" class="btn btn-primary") Submit
+        a(href="/products" style="margin-top: 10px;" class="btn btn-primary") product list
