@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Add product!</h2>
+    <form id="addProductForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="name">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price: </label>
+            <input type="number" class="form-control" name="price" id="price" aria-describedby="price">
+        </div>
+        <div class="mb-3">
+            <label for="photoUrl" class="form-label">Photo URL: </label>
+            <input type="text" class="form-control" name="photoUrl" id="photoUrl" aria-describedby="photoUrl">
+        </div>
+        <button type='button' class="btn btn-primary" onclick="addProduct(addProductForm)">Submit</button>
+    </form> 
+</div>
+
+{{>table}}
+{{>chat}}
