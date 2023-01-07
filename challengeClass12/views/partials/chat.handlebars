@@ -1,18 +1,19 @@
-<div class="container">
-
+<div class="container bg-light">
+    <h2 class="text-primary fw-bold">Message Center</h2>
     <form id="addMessageForm">
         <div class="mb-3">
-            <label for="name" class="form-label">Name: </label>
-            <input type="text" class="form-control" name="name" id="name" aria-describedby="name">
+            <label for="email" class="form-label">Email: </label>
+            <input type="email" class="form-control text-dark" name="email" id="naemailme" aria-describedby="email" placeholder="example@gmail.com">
+        </div>
+        <div class="container">
+            <ul id="chat">
+
+            </ul>
         </div>
         <div class="mb-3">
-            <label for="message" class="form-label">Message: </label>
-            <textarea class="form-control" name="message" id="message" aria-describedby="message" rows="3"></textarea>
+            <label for="message" class="form-label ">Message: </label>
+            <input type="text" class="form-control text-dark" name="message" id="message" aria-describedby="message" placeholder="Insert message">
         </div>
-        <button type='button' class="btn btn-primary" onclick="addMessage(addMessageForm)">Submit</button>
+        <button type='button' class="btn btn-success" onclick="addMessage(addMessageForm)">Submit</button>
     </form> 
-
-    <ul id="chat">
-
-    </ul>
 </div>

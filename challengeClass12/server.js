@@ -22,12 +22,16 @@ const products = [
 ]
 
 const chat = [
-    {author: 'Ezequiel', text: 'Hello people'},
-    {author: 'Florencia', text: 'Hello Ezequiel!'}
+    {author: 'ezequielbibee.dev@gmail.com', text: 'Hello people', date: '29/12/2022, 20:51:16'},
+    {author: 'florencia.test@gmail.com', text: 'Hello Ezequiel!',date: '29/12/2022, 20:52:34'}
 ]
 
 app.get('/', (req, res) => {
     res.render('home')
+})
+app.get('/getData', (req, res) => {
+    const data = {"products": products, "chat": chat}
+    res.json(data)
 })
 
 io.on('connection', (client)=>{

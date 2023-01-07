@@ -18,7 +18,7 @@ socket.on('messageToChat', data => {
     let html = ''
     data.forEach((message) => {
         html = `${html.length != 0 ? html : ''}
-            <li><i>${message.author}</i>: ${message.text}</li>`
+            <li class="list-group-item"><span class="text-primary fw-bold">${message.author}</span> [<span class="text-danger">${message.date}</span>]<span class="text-success">:${message.text}</span></li>`
     })
     document.getElementById('chat').innerHTML = html
 })
@@ -33,9 +33,25 @@ const addProduct = (addProductForm) => {
 }
 
 const addMessage = (addMessageForm) => {
+    const date = new Date().toLocaleString()
+
     const message = {
-        author: addMessageForm.name.value,
+        author: addMessageForm.email.value,
         text: addMessageForm.message.value,
+        date
     }
     socket.emit('addMessage', message)
 }
+
+const getData = async () => {
+    try{
+        const req = await fetch('/getData')
+        const res = await req.json()
+        console.log(res)
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+
+getData()
