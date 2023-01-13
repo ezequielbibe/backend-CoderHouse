@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "timeStamp": "10/1/2023, 21:34:57",
+    "products": [
+      {
+        "name": "Calculadora",
+        "price": 234.56,
+        "thumbnail": "asd2",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timeStamp": "10/1/2023, 21:44:00",
+    "products": [
+      {
+        "name": "Calculadora",
+        "price": 234.56,
+        "thumbnail": "asd2",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "timeStamp": "12/1/2023, 21:37:12",
+    "products": [
+      {
+        "name": "Calculadora",
+        "price": 234.56,
+        "thumbnail": "asd2",
+        "id": 2
+      }
+    ]
+  }
+]

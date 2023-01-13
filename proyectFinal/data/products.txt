@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "timeStamp": "12/1/2023, 22:07:00",
+    "name": "pencil modifiqued",
+    "description": "aaaa description aaa modifiqued",
+    "code": 123,
+    "photo": "aaaaa url photo aaaa modifiqued",
+    "price": 123.12,
+    "stock": 1111
+  },
+  {
+    "name": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "asd2",
+    "id": 2
+  },
+  {
+    "name": "Globo Terraqueo",
+    "price": 345.67,
+    "thumbnail": "asd3",
+    "id": 3
+  }
+]
