@@ -23,7 +23,8 @@ socket.on('messageToChat', data => {
     document.getElementById('chat').innerHTML = html
 })
 
-const addProduct = (addProductForm) => {
+const addProduct = (event, addProductForm) => {
+    event.preventDefault()
     const product = {
         name: addProductForm.name.value,
         price: addProductForm.price.value,
@@ -32,9 +33,9 @@ const addProduct = (addProductForm) => {
     socket.emit('addProduct', product)
 }
 
-const addMessage = (addMessageForm) => {
+const addMessage = (event, addMessageForm) => {
+    event.preventDefault()
     const date = new Date().toLocaleString()
-
     const message = {
         author: addMessageForm.email.value,
         text: addMessageForm.message.value,

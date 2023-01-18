@@ -63,7 +63,7 @@ io.on('connection', async (client)=>{
         client.on('addMessage', async data =>{
             try{
                 b.insertData(data)
-                chat = await b.insertData()
+                chat = await b.getData()
                 client.emit('messageToChat', chat)
             }
             catch(error){
