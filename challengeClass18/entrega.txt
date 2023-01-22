@@ -1,0 +1,45 @@
+-use ecommerce
+
+////////////////// 1 y 2 
+
+-db.products.insertMany([{name: "Argentina Jersey", price: 80, photoUrl: "image1.com"},{name: "River Plate Jersey", price: 150, photoUrl: "image2.com"},{name: "River Plate short", price: 300, photoUrl: "image3.com"},{name: "Argentina short", price: 550, photoUrl: "image4.com"},{name:"River Plate Jersey champion 2018", price: 930, photoUrl: "image5.com"},{name: "River Plate woman Jersey", price: 1320, photoUrl: "image6.com"},{name:"Mexico Jersey World Cup 2022", price: 1550, photoUrl: "image7.com"},{name:"Uruguay Jersey World Cup 2022", price: 1950, photoUrl: "image8.com"},{name: "Brasil Jersey World Cup 2022", price: 2400, photoUrl: "image9.com"},{name:"Chile Jerset not World Cup", price: 3200, photoUrl: "image10.com"}])
+
+
+-db.messages.insertMany([{author: "ezequielbibee.dev@gmail.com", text: "Hello people!", date: "29/12/2022, 20:51:16"},{author: "florenciasalinas11@gmail.com", text: "Hello Ezequiel", date: "29/12/2022, 20:52:34"},{author: "ezequielbibee.dev@gmail.com", text: "How are you?", date: "29/12/2022, 20:52:33"},{author: "florenciasalinas11@gmail.com", text: "Good! and you?", date: "29/12/2022, 20:53:12"},{author: "ezequielbibee.dev@gmail.com", text: "Very very good!", date: "29/12/2022, 20:53:50"},{author: "florenciasalinas11@gmail.com", text: "Hello Ezequiel", date: "29/12/2022, 20:54:34"},{author: "ezequielbibee.dev@gmail.com", text: "How old are you?", date: "29/12/2022, 20:54:55"},{author: "florenciasalinas11@gmail.com", text: "22 years old, you?", date: "29/12/2022, 20:55:22"},{author: "ezequielbibee.dev@gmail.com", text: "I'm 24 years old", date: "29/12/2022, 20:56:26"},{author: "florenciasalinas11@gmail.com", text: "Wow, you are bigger than me!", date: "29/12/2022, 20:57:54"}])
+
+
+////////////////// 3
+
+-db.products.find().pretty()
+
+-db.messages.find().pretty()
+
+////////////////// 4 
+
+-db.products.countDocuments()
+
+-db.messages.countDocuments()
+
+////////////////// 5
+
+-db.products.insertOne({name: "Japan Jersey World Cup 2022", price: 2100, photoUrl: "image11.com"})
+
+-db.products.find({price: {$lt: 1000}}, {"_id": 0, "name": 1})
+
+-db.products.find({price: {$gt: 1000, $lt: 3000}}, {"_id": 0, name: 1})
+
+-db.products.find({price: {$gt: 3000}}, {"_id": 0, name: 1})
+
+-db.products.find({}, {"_id": 0, name: 1}).sort({price: 1}).skip(2).limit(1)
+
+-db.products.updateMany({},{$set: {stock: 100}})
+
+-db.products.updateMany({price: {$gt: 4000}},{$set: {stock: 0}})
+
+-db.products.deleteMany({price: {$lt: 1000}})
+
+////////////////// 6
+
+-use admin
+
+-db.createUser({user: "pepe", pwd: "asd456", roles: [{role:"read", db:"ecommerce"}]})
