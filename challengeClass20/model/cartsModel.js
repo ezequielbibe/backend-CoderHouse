@@ -7,6 +7,6 @@ const cartsSchema = new Schema({
     products: { type: Array, required: true }
 })
 
-const Carts = model('Cart', productsSchema)
+const Carts = model('Cart', cartsSchema)
 
 export default Carts
