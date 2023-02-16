@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.price}}</td>
+                    <td><img style="width: 50px; height: 50px" src={{this.photoUrl}}></img></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+    <a href="/" class="btn btn-primary">add product</a>
+</div>
