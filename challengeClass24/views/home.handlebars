@@ -1,0 +1,23 @@
+{{>welcome}}
+
+<div class="container bg-light">
+    <h2 class="text-primary fw-bold">Add product</h2>
+    <form id="addProductForm">
+        <div class="mb-3">
+            <p class="fw-bold fst-italic">Name</p>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="name">
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold fst-italic">Price</p>
+            <input type="number" class="form-control" name="price" id="price" aria-describedby="price">
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold fst-italic">Photo URL</p>
+            <input type="text" class="form-control" name="photoUrl" id="photoUrl" aria-describedby="photoUrl">
+        </div>
+        <button type='button' class="btn btn-success" onclick="addProduct(event, addProductForm)">Submit</button>
+    </form> 
+</div>
+
+{{>table}}
+{{>chat}}

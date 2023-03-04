@@ -1,0 +1,39 @@
+<div class="container bg-light">
+    <h2 class="text-primary fw-bold">Message Center</h2>
+    <form id="addMessageForm">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email: </label>
+            <input type="email" class="form-control text-dark" name="email" id="email" aria-describedby="email" placeholder="example@gmail.com">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" class="form-control text-dark" name="name" id="name" aria-describedby="name" placeholder="Enzo">
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Lastname: </label>
+            <input type="text" class="form-control text-dark" name="lastname" id="lastname" aria-describedby="lastname" placeholder="Fernandez">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age: </label>
+            <input type="number" class="form-control text-dark" name="age" id="age" aria-describedby="age" placeholder="21">
+        </div>
+        <div class="mb-3">
+            <label for="alias" class="form-label">Alias: </label>
+            <input type="text" class="form-control text-dark" name="alias" id="alias" aria-describedby="alias" placeholder="Golden Boy">
+        </div>
+        <div class="mb-3">
+            <label for="avatar" class="form-label">Avatar: </label>
+            <input type="text" class="form-control text-dark" name="avatar" id="avatar" aria-describedby="avatar" placeholder="example">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label ">Message: </label>
+            <input type="text" class="form-control text-dark" name="message" id="message" aria-describedby="message" placeholder="Insert message">
+        </div>
+        <div class="container">
+            <ul id="chat">
+
+            </ul>
+        </div>
+        <button type='button' class="btn btn-success" onclick="addMessage(event, addMessageForm)">Submit</button>
+    </form> 
+</div>
